@@ -1,0 +1,304 @@
+<style>
+.chart-section {
+  background-color: rgba(248, 247, 249, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+}
+
+.header-nav {
+  background-color: rgba(16, 20, 25, 1);
+  align-self: stretch;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 12px 12px 12px 80px;
+}
+
+.logo {
+  aspect-ratio: 3.16;
+  object-fit: contain;
+  object-position: center;
+  width: 177px;
+  max-width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px 100px;
+  flex-wrap: wrap;
+  margin: auto 0;
+}
+
+.nav-item {
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  margin: auto 0;
+  font: 700 24px Poppins, sans-serif;
+}
+
+.chart-title {
+  color: rgba(16, 20, 25, 1);
+  text-align: center;
+  margin-top: 30px;
+  font: 700 64px/1 Poppins, sans-serif;
+}
+
+.chart-image {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 510px;
+  margin-top: 30px;
+  max-width: 100%;
+}
+
+.chart-legend {
+  display: flex;
+  margin-top: 43px;
+  width: 554px;
+  max-width: 100%;
+  gap: 40px 49px;
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  flex-wrap: wrap;
+  font: 700 20px/40px Poppins, sans-serif;
+}
+
+.legend-column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0;
+  width: fit-content;
+}
+
+.legend-item {
+  z-index: 10;
+  display: flex;
+  gap: 38px;
+}
+
+.legend-dot {
+  border-radius: 5px;
+  display: flex;
+  width: 24px;
+  height: 24px;
+}
+
+.dot-yellow { background-color: rgba(255, 217, 102, 1); }
+.dot-green { background-color: rgba(133, 224, 163, 1); }
+.dot-red { background-color: rgba(255, 175, 163, 1); }
+.dot-blue { background-color: rgba(128, 202, 255, 1); }
+
+.footer {
+  background-color: rgba(16, 20, 25, 1);
+  align-self: stretch;
+  display: flex;
+  margin-top: 60px;
+  width: 100%;
+  flex-direction: column;
+  padding: 10px 15px 10px 80px;
+}
+
+.footer-content {
+  align-self: center;
+  width: 100%;
+  max-width: 1145px;
+}
+
+.footer-columns {
+  gap: 20px;
+  display: flex;
+}
+
+.footer-logo {
+  width: 17%;
+}
+
+.footer-nav {
+  width: 83%;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: #fff;
+  font: 400 16px Inter, sans-serif;
+}
+
+.footer-heading {
+  color: #fff;
+  font: 600 18px Poppins, sans-serif;
+}
+
+.newsletter-form {
+  align-self: stretch;
+  display: flex;
+  margin-top: 39px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.email-input {
+  border-radius: 8px;
+  background-color: rgba(0, 109, 119, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: #fff;
+  font-weight: 400;
+  flex-grow: 1;
+  flex-basis: 0;
+  width: fit-content;
+  padding: 20px 25px;
+}
+
+.submit-button {
+  border-radius: 12px;
+  background-color: #fff;
+  color: #1d2130;
+  font-weight: 500;
+  padding: 16px 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.copyright {
+  color: #fff;
+  text-align: center;
+  font: 400 16px/40px Poppins, sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+@media (max-width: 991px) {
+  .header-nav {
+    max-width: 100%;
+    padding-left: 20px;
+  }
+  
+  .nav-links {
+    max-width: 100%;
+  }
+  
+  .chart-title {
+    max-width: 100%;
+    font-size: 40px;
+  }
+  
+  .chart-legend {
+    margin-top: 40px;
+  }
+  
+  .footer {
+    max-width: 100%;
+    padding-left: 20px;
+    margin-top: 40px;
+  }
+  
+  .footer-columns {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  
+  .footer-logo,
+  .footer-nav {
+    width: 100%;
+    margin: 40px 0;
+  }
+  
+  .submit-button {
+    padding: 16px 20px;
+  }
+}
+</style>
+
+<section class="chart-section">
+  <nav class="header-nav">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/12f60b77fd228d0416cd17fded1f05755baac15e6fc1136fe16237ac8dbe53d6?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="LIFT IT Logo" class="logo" />
+    <div class="nav-links">
+      <a href="#" class="nav-item">Home</a>
+      <a href="#" class="nav-item">Learn more</a>
+      <a href="#" class="nav-item">FAQ</a>
+    </div>
+  </nav>
+
+  <h1 class="chart-title">Your Condition Chart</h1>
+  
+  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/19ea407e769cc4a88c10637ef265d71054befc6da060bc7c5051141b03b39224?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Fitness condition visualization chart" class="chart-image" />
+  
+  <div class="chart-legend">
+    <div class="legend-column">
+      <div class="legend-item">
+        <span class="legend-dot dot-yellow"></span>
+        <span>Mobility & Recovery</span>
+        <span class="legend-dot dot-green"></span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot dot-red"></span>
+        <span>Full Body Workout</span>
+        <span class="legend-dot dot-blue"></span>
+      </div>
+    </div>
+    <div class="legend-column">
+      <span>Push & Pull</span>
+      <span>Strength & Power</span>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-columns">
+        <div class="footer-logo">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/12f60b77fd228d0416cd17fded1f05755baac15e6fc1136fe16237ac8dbe53d6?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="LIFT IT Logo" class="logo" />
+        </div>
+        
+        <div class="footer-nav">
+          <div class="footer-links">
+            <h3 class="footer-heading">Resources</h3>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Condition</a>
+            <a href="#">Contact Us</a>
+          </div>
+          
+          <div class="footer-links">
+            <h3 class="footer-heading">Navigation</h3>
+            <a href="#">Home</a>
+            <a href="#">Learn more</a>
+            <a href="#">FAQ</a>
+            <a href="#">Login / Register</a>
+          </div>
+          
+          <div class="footer-links">
+            <h2 class="footer-heading">LIFT IT</h2>
+            <p>Subscribe to our Newsletter</p>
+            <form class="newsletter-form">
+              <label for="email" class="visually-hidden">Enter your Email</label>
+              <input type="email" id="email" class="email-input" placeholder="Enter your Email" required />
+              <button type="submit" class="submit-button">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        Copyright © 2024 "LIFT IT" for WSB Academy Interdisciplinary Project, All Rights Reserved
+      </div>
+    </div>
+  </footer>
+</section>

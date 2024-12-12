@@ -1,0 +1,567 @@
+<style>
+.workout-log-container {
+  background-color: rgba(248, 247, 249, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header-nav {
+  background-color: rgba(16, 20, 25, 1);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 12px 80px;
+}
+
+.logo {
+  aspect-ratio: 3.16;
+  object-fit: contain;
+  width: 177px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  color: #fff;
+  text-align: center;
+  font: 700 24px Poppins, sans-serif;
+}
+
+.user-controls {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.user-icon {
+  aspect-ratio: 1;
+  width: 27px;
+}
+
+.dropdown-icon {
+  aspect-ratio: 1.22;
+  width: 11px;
+}
+
+.main-content {
+  align-self: center;
+  display: flex;
+  margin-top: 32px;
+  width: 100%;
+  max-width: 1095px;
+  flex-direction: column;
+}
+
+.page-title {
+  color: rgba(16, 20, 25, 1);
+  text-align: center;
+  align-self: start;
+  font: 700 64px/1 Poppins, sans-serif;
+}
+
+.workout-form {
+  border-radius: 15px;
+  background-color: rgba(248, 247, 249, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 40px;
+  width: 984px;
+  max-width: 100%;
+  padding: 20px 72px;
+  border: 2px solid rgba(0, 109, 119, 0.5);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  gap: 20px;
+}
+
+.exercise-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  color: rgba(16, 20, 25, 1);
+  text-align: center;
+  align-self: start;
+  font: 600 40px/1 Poppins, sans-serif;
+}
+
+.session-name-label {
+  color: rgba(36, 35, 37, 1);
+  text-align: center;
+  margin: 26px 0 0 20px;
+  font: 500 24px/2 Inter, sans-serif;
+}
+
+.session-input {
+  border-radius: 10px;
+  background-color: transparent;
+  width: 479px;
+  height: 40px;
+  border: 1px solid rgba(0, 109, 119, 0.5);
+  margin-top: 11px;
+}
+
+.exercise-controls {
+  display: flex;
+  margin-top: 19px;
+  gap: 26px;
+}
+
+.exercise-select {
+  display: flex;
+  gap: 5px;
+  flex-grow: 1;
+}
+
+.exercise-icon {
+  aspect-ratio: 1;
+  width: 16px;
+  margin-top: 42px;
+}
+
+.select-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.select-label {
+  color: rgba(36, 35, 37, 1);
+  text-align: center;
+  font: 500 24px/2 Inter, sans-serif;
+}
+
+.select-dropdown {
+  border-radius: 10px;
+  background-color: transparent;
+  display: flex;
+  margin-top: 11px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 56px;
+  border: 1px solid rgba(0, 109, 119, 0.5);
+}
+
+.dropdown-arrow {
+  aspect-ratio: 1;
+  width: 24px;
+}
+
+.reps-section {
+  display: flex;
+  gap: 5px;
+  color: rgba(36, 35, 37, 1);
+  font: 500 24px/2 Inter, sans-serif;
+}
+
+.reps-icon {
+  aspect-ratio: 1;
+  width: 16px;
+  margin-top: 41px;
+}
+
+.reps-input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.reps-input {
+  border-radius: 10px;
+  background-color: transparent;
+  height: 40px;
+  border: 1px solid rgba(0, 109, 119, 0.5);
+  margin-top: 6px;
+}
+
+.exercise-item {
+  border-radius: 5px;
+  background-color: rgba(0, 109, 119, 1);
+  width: 379px;
+  color: rgba(248, 247, 249, 1);
+  margin: 8px 0 0 20px;
+  padding: 5px 0;
+  font: 400 16px/2.5 Inter, sans-serif;
+}
+
+.workout-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 67px;
+}
+
+.detail-label {
+  color: rgba(36, 35, 37, 1);
+  text-align: center;
+  margin-left: 65px;
+  font: 500 24px/2 Inter, sans-serif;
+}
+
+.date-picker {
+  border-radius: 10px;
+  background-color: transparent;
+  display: flex;
+  margin-top: 11px;
+  width: 177px;
+  align-items: center;
+  padding: 12px 11px;
+  border: 1px solid rgba(0, 109, 119, 0.5);
+}
+
+.calendar-icon {
+  aspect-ratio: 1;
+  width: 16px;
+}
+
+.duration-input {
+  border-radius: 10px;
+  background-color: transparent;
+  width: 178px;
+  height: 40px;
+  border: 1px solid rgba(0, 109, 119, 0.5);
+  margin-top: 11px;
+}
+
+.submit-btn {
+  border-radius: 10px;
+  background-color: rgba(0, 109, 119, 1);
+  color: rgba(248, 247, 249, 1);
+  text-align: center;
+  padding: 0 68px;
+  font: 500 24px/2 Inter, sans-serif;
+  margin-top: 98px;
+  border: none;
+  cursor: pointer;
+}
+
+.workout-log {
+  margin-top: 28px;
+}
+
+.log-entry {
+  border-radius: 5px;
+  background-color: rgba(0, 109, 119, 1);
+  display: flex;
+  width: 982px;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 4px 8px 4px 80px;
+  font: 700 20px/40px Inter, sans-serif;
+  margin-bottom: 40px;
+}
+
+.log-details {
+  flex-grow: 1;
+}
+
+.expand-icon {
+  aspect-ratio: 1;
+  width: 24px;
+}
+
+.footer {
+  background-color: rgba(16, 20, 25, 1);
+  margin-top: 32px;
+  padding: 10px 80px;
+  color: #fff;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 17% 83%;
+  gap: 20px;
+  max-width: 1145px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  aspect-ratio: 3.16;
+  width: 177px;
+  margin-top: 32px;
+}
+
+.footer-sections {
+  display: grid;
+  grid-template-columns: 22% 16% 62%;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font: 400 16px Inter, sans-serif;
+}
+
+.footer-heading {
+  font: 600 18px Poppins, sans-serif;
+}
+
+.newsletter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 39px;
+}
+
+.newsletter-title {
+  color: #fff;
+  font: 700 46px Poppins, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.newsletter-subtitle {
+  font: 600 18px Roboto, sans-serif;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 20px;
+}
+
+.email-input {
+  border-radius: 8px;
+  background-color: rgba(0, 109, 119, 1);
+  color: #fff;
+  padding: 20px 25px;
+  flex-grow: 1;
+  border: none;
+}
+
+.subscribe-btn {
+  border-radius: 12px;
+  background-color: #fff;
+  color: #1d2130;
+  font-weight: 500;
+  padding: 16px 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+  max-width: 1051px;
+  margin-left: auto;
+  font: 400 16px/40px Poppins, sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 991px) {
+  .header-nav {
+    padding-left: 20px;
+  }
+  
+  .main-content {
+    max-width: 100%;
+  }
+  
+  .page-title {
+    font-size: 40px;
+  }
+  
+  .workout-form {
+    padding: 20px;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .exercise-section,
+  .workout-details {
+    margin-top: 40px;
+  }
+  
+  .submit-btn {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+  
+  .log-entry {
+    padding-left: 20px;
+  }
+  
+  .footer {
+    padding: 20px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-sections {
+    grid-template-columns: 1fr;
+  }
+  
+  .newsletter-title {
+    font-size: 40px;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .subscribe-btn {
+    width: 100%;
+  }
+}
+</style>
+
+<div class="workout-log-container">
+  <nav class="header-nav">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/12f60b77fd228d0416cd17fded1f05755baac15e6fc1136fe16237ac8dbe53d6?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="LIFT IT Logo" class="logo" />
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#learn">Learn more</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="user-controls">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ac3b5b08a68afd39f309704ec08fdf2efabe3cae29c53c19ba41a714106399ee?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="User profile" class="user-icon" />
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b42038ac1ad54fdd682e2621dca1eebba8028766c0d0b236134d63d2904d4c7c?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" class="dropdown-icon" />
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <h1 class="page-title">Your Workout Log</h1>
+    
+    <form class="workout-form">
+      <div class="form-grid">
+        <div class="exercise-section">
+          <h2 class="section-title">Add new session</h2>
+          
+          <label for="session-name" class="session-name-label">Session name</label>
+          <input type="text" id="session-name" class="session-input" />
+          
+          <div class="exercise-controls">
+            <div class="exercise-select">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/953ff967879307b54c4ea7023fed52fc00017f9a35460df2ca891293e2bc0741?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" class="exercise-icon" />
+              <div class="select-wrapper">
+                <label for="exercise" class="select-label">Select exercise</label>
+                <div class="select-dropdown">
+                  <select id="exercise">
+                    <option value="">Choose exercise</option>
+                  </select>
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4a61e0dd789f5e50e21263dfea549beefe1ede2d987d7a1177eee36853a3b627?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" class="dropdown-arrow" />
+                </div>
+              </div>
+            </div>
+            
+            <div class="reps-section">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fceb0b34b4c59282bd134637700d0f82c8b24a734298a8d669054392613a1bba?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" class="reps-icon" />
+              <div class="reps-input-wrapper">
+                <label for="reps" class="select-label">Reps</label>
+                <input type="number" id="reps" class="reps-input" />
+              </div>
+            </div>
+          </div>
+          
+          <div class="exercise-item">Squat – 4 sets x 8 reps @ 100kg</div>
+          <div class="exercise-item">Bench Press – 3 sets x 10 reps @ 80 kg</div>
+          <div class="exercise-item">Deadlift – 5 sets x 5 reps @ 120 kg</div>
+          <div class="exercise-item">Overhead Press – 3 sets x 8 reps @ 60 kg</div>
+        </div>
+        
+        <div class="workout-details">
+          <label for="workout-date" class="detail-label">Date</label>
+          <div class="date-picker">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c828f53e464dda2858be7f55107e7e4c4b3fb8d89ca8b62eb137f6f61ab8530?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" class="calendar-icon" />
+          </div>
+          
+          <label for="duration" class="detail-label">Duration</label>
+          <input type="time" id="duration" class="duration-input" />
+          
+          <button type="submit" class="submit-btn">Add</button>
+        </div>
+      </div>
+    </form>
+    
+    <section class="workout-log">
+      <div class="log-entry">
+        <div class="log-details">
+          Date: <span>2024-12-09</span> | Session Name: <span>Strength Training - Full Body</span> | Duration: <span>1h 15min</span>
+        </div>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8bd2fa30a32564a0bb3c4f9af0c8c72864c59ffa064360a9490525b90bcc7769?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" class="expand-icon" />
+      </div>
+      
+      <div class="log-entry">
+        <div class="log-details">
+          Date: <span>2024-12-07</span> | Session Name: <span>Upper Body Power</span> | Duration: <span>1h 5min</span>
+        </div>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5a44b3dd0de2a1df612799f7ba1e8c2f8ed70c4103f521755d4f2584e1555000?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" class="expand-icon" />
+      </div>
+      
+      <div class="log-entry">
+        <div class="log-details">
+          Date: <span>2024-12-05</span> | Session Name: <span>Leg Day Blast</span> | Duration: <span>1h 30min</span>
+        </div>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5a44b3dd0de2a1df612799f7ba1e8c2f8ed70c4103f521755d4f2584e1555000?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" class="expand-icon" />
+      </div>
+      
+      <div class="log-entry">
+        <div class="log-details">
+          Date: <span>2024-12-03</span> | Session Name: <span>Conditioning & Core</span> | Duration: <span>45min</span>
+        </div>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5a44b3dd0de2a1df612799f7ba1e8c2f8ed70c4103f521755d4f2584e1555000?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" class="expand-icon" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/12f60b77fd228d0416cd17fded1f05755baac15e6fc1136fe16237ac8dbe53d6?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="LIFT IT Logo" class="footer-logo" />
+      
+      <div class="footer-sections">
+        <div class="footer-links">
+          <h3 class="footer-heading">Resources</h3>
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms and Condition</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+        
+        <div class="footer-links">
+          <h3 class="footer-heading">Navigation</h3>
+          <a href="#home">Home</a>
+          <a href="#learn">Learn more</a>
+          <a href="#faq">FAQ</a>
+          <a href="#login">Login / Register</a>
+        </div>
+        
+        <div class="newsletter-section">
+          <h2 class="newsletter-title">LIFT IT</h2>
+          <p class="newsletter-subtitle">Subscribe to our Newsletter</p>
+          
+          <form class="newsletter-form">
+            <label for="email" class="visually-hidden">Enter your Email</label>
+            <input type="email" id="email" class="email-input" placeholder="Enter your Email" />
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>Copyright © 2024 "LIFT IT" for WSB Academy Interdisciplinary Project, All Rights Reserved</p>
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/68019b13b762f9e4fc9b9605f94b0bdcdb8ba58bb6939514f03acac2b698dede?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" class="expand-icon" />
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,338 @@
+<style>
+.hydration-tracker-container {
+  background-color: rgba(248, 247, 249, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header-nav {
+  background-color: rgba(16, 20, 25, 1);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 12px 80px 12px 12px;
+}
+
+.logo {
+  aspect-ratio: 3.16;
+  object-fit: contain;
+  width: 177px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  color: #fff;
+  font: 700 24px Poppins, sans-serif;
+}
+
+.user-controls {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.user-avatar {
+  aspect-ratio: 1;
+  width: 27px;
+}
+
+.dropdown-icon {
+  aspect-ratio: 1.22;
+  width: 11px;
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-icon {
+  aspect-ratio: 1;
+  width: 7px;
+}
+
+.menu-line {
+  background-color: #c1c1c1;
+  height: 25px;
+}
+
+.tracker-content {
+  align-self: center;
+  display: flex;
+  margin-top: 32px;
+  width: 100%;
+  max-width: 1085px;
+  flex-direction: column;
+}
+
+.tracker-title {
+  color: #101419;
+  font: 700 64px/1 Poppins, sans-serif;
+}
+
+.day-card {
+  border-radius: 15px;
+  background-color: #f8f7f9;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  margin-top: 8px;
+  width: 984px;
+  max-width: 100%;
+  padding: 23px 51px;
+  border: 2px solid rgba(0, 109, 119, 0.5);
+}
+
+.day-card--alert {
+  border-color: #ff220c;
+}
+
+.day-name {
+  color: #101419;
+  font: 600 24px/2 Inter, sans-serif;
+}
+
+.day-name--alert {
+  color: #ff220c;
+}
+
+.water-icons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.water-icon {
+  aspect-ratio: 1;
+  width: 75px;
+}
+
+.footer {
+  background-color: #101419;
+  margin-top: 56px;
+  width: 100%;
+  padding: 10px 80px 10px 15px;
+}
+
+.footer-content {
+  max-width: 1145px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-logo {
+  width: 177px;
+  margin-top: 32px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  color: #fff;
+  font: 400 16px Inter, sans-serif;
+}
+
+.footer-column-title {
+  color: #fff;
+  font: 600 18px Poppins, sans-serif;
+}
+
+.footer-link {
+  margin-top: 24px;
+}
+
+.newsletter-section {
+  width: 100%;
+}
+
+.newsletter-title {
+  color: #fff;
+  font: 700 46px Poppins, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.newsletter-text {
+  color: #fff;
+  font: 600 18px Roboto, sans-serif;
+  margin-top: 49px;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 39px;
+  width: 100%;
+  gap: 10px;
+}
+
+.newsletter-input {
+  border-radius: 8px;
+  background-color: rgba(0, 109, 119, 1);
+  color: #fff;
+  padding: 20px 25px;
+  flex-grow: 1;
+}
+
+.newsletter-button {
+  border-radius: 12px;
+  background-color: #fff;
+  color: #1d2130;
+  font: 500 16px Roboto, sans-serif;
+  padding: 16px 40px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  display: flex;
+  margin-top: 28px;
+  width: 100%;
+  max-width: 1050px;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font: 400 16px/40px Poppins, sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 991px) {
+  .header-nav {
+    padding-left: 20px;
+  }
+  
+  .tracker-title {
+    font-size: 40px;
+  }
+  
+  .day-card {
+    padding: 20px;
+  }
+  
+  .footer {
+    padding-left: 20px;
+    margin-top: 40px;
+  }
+  
+  .footer-grid {
+    flex-direction: column;
+  }
+  
+  .newsletter-title {
+    font-size: 40px;
+  }
+  
+  .newsletter-text {
+    margin-top: 40px;
+  }
+  
+  .newsletter-button {
+    padding: 16px 20px;
+  }
+}
+</style>
+
+<div class="hydration-tracker-container">
+  <nav class="header-nav">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/12f60b77fd228d0416cd17fded1f05755baac15e6fc1136fe16237ac8dbe53d6?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Lift It Logo" class="logo" />
+    <div class="nav-links">
+      <a href="#" tabindex="0">Home</a>
+      <a href="#" tabindex="0">Learn more</a>
+      <a href="#" tabindex="0">FAQ</a>
+    </div>
+    <div class="user-controls">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d49bd33742cde03f17aae02911938934b80ee0ba56a19cae51714037dd51eaa3?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="User Profile" class="user-avatar" />
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6bf3ec8dc1d12eb3b3970ee7075bde238f41c8a7338aac22c2a581943b33d748?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" class="dropdown-icon" />
+    </div>
+    <button class="menu-toggle" aria-label="Toggle Menu">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c97d818f77bdd57c7b32d33cd2171c17cc00e938a9dffa3fbbb3aa06ffc9148?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" class="menu-icon" />
+      <span class="menu-line"></span>
+    </button>
+  </nav>
+
+  <main class="tracker-content">
+    <h1 class="tracker-title">Hydration Tracker</h1>
+    
+    <div class="day-card">
+      <h2 class="day-name">Monday</h2>
+      <div class="water-icons">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/16f6e4e97ddef144b0f28a47cb40c383bd15db3f0c9d036170f415f5dbfa27b0?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water Glass" class="water-icon" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a516d7f6722265b037c3b288263e57800754a2ec0453c856fc40d3390c08e8ba?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water Glass" class="water-icon" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/16f6e4e97ddef144b0f28a47cb40c383bd15db3f0c9d036170f415f5dbfa27b0?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water Glass" class="water-icon" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/da63f3aa8236e435ad89dd063586329fc48b0383e0aa4fd88c0d3bcc5cb17a8a?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water Glass" class="water-icon" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/41adeda6036707bf37727d3a6a1aae0c5abbdc749ecb4773e1cc63eb382ead84?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water Glass" class="water-icon" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b12adf10194a33d818082ab904f40a7c3a06ff13c58862de6351246e96613248?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water Glass" class="water-icon" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a516d7f6722265b037c3b288263e57800754a2ec0453c856fc40d3390c08e8ba?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water Glass" class="water-icon" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/be6233c78605b2732e1a445752f74f598e207b1e79486d69cbeb13f891ecbeb5?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water Glass" class="water-icon" />
+      </div>
+    </div>
+
+    <div class="day-card day-card--alert">
+      <h2 class="day-name day-name--alert">Friday</h2>
+      <div class="water-icons">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/16f6e4e97ddef144b0f28a47cb40c383bd15db3f0c9d036170f415f5dbfa27b0?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water Glass" class="water-icon" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4008f88056d0891af66536ca0514deb6da0c2b9ea069886d905986cb660f7142?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water Glass" class="water-icon" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/30dd7a04269dfd5aec771c36cc5c8ac4354e907d8bd30ef4f4a12dc3df468c82?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water Glass" class="water-icon" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/27c56265db380c653c24b4b46a2e9a954a0e45483b07d87d216eaf45779821d4?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water Glass" class="water-icon" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cbf7f9ef565cca9415f18629c6eef23bf02193aa956b9785710eebe257c460e2?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water Glass" class="water-icon" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f1cbfe44a533c07e4f9857ed300a1574ef29a4e1e348fb3d25e30b766f9252ea?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water Glass" class="water-icon" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4008f88056d0891af66536ca0514deb6da0c2b9ea069886d905986cb660f7142?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water Glass" class="water-icon" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/30dd7a04269dfd5aec771c36cc5c8ac4354e907d8bd30ef4f4a12dc3df468c82?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water Glass" class="water-icon" />
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/12f60b77fd228d0416cd17fded1f05755baac15e6fc1136fe16237ac8dbe53d6?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Lift It Logo" class="footer-logo" />
+        
+        <div class="footer-links">
+          <div>
+            <h3 class="footer-column-title">Resources</h3>
+            <a href="#" class="footer-link" tabindex="0">Privacy Policy</a>
+            <a href="#" class="footer-link" tabindex="0">Terms and Conditions</a>
+            <a href="#" class="footer-link" tabindex="0">Contact Us</a>
+          </div>
+          
+          <div>
+            <h3 class="footer-column-title">Navigation</h3>
+            <a href="#" class="footer-link" tabindex="0">Home</a>
+            <a href="#" class="footer-link" tabindex="0">Learn more</a>
+            <a href="#" class="footer-link" tabindex="0">FAQ</a>
+            <a href="#" class="footer-link" tabindex="0">Login / Register</a>
+          </div>
+          
+          <div class="newsletter-section">
+            <h3 class="newsletter-title">LIFT IT</h3>
+            <p class="newsletter-text">Subscribe to our Newsletter</p>
+            <form class="newsletter-form">
+              <label for="email" class="visually-hidden">Enter your Email</label>
+              <input type="email" id="email" class="newsletter-input" placeholder="Enter your Email" required aria-label="Enter your Email" />
+              <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>Copyright © 2024 "LIFT IT" for WSB Academy Interdisciplinary Project, All Rights Reserved</p>
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/68019b13b762f9e4fc9b9605f94b0bdcdb8ba58bb6939514f03acac2b698dede?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" class="menu-icon" />
+    </div>
+  </footer>
+</div>

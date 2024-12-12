@@ -1,0 +1,409 @@
+<style>
+.coffee-tracker {
+  background-color: #f8f7f9;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+}
+
+.header {
+  background-color: #101419;
+  width: 100%;
+  padding: 12px 80px 12px 80px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.logo {
+  aspect-ratio: 3.16;
+  width: 177px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 95px;
+  color: #fff;
+  text-align: center;
+  margin: auto 0;
+  font: 700 24px Poppins, sans-serif;
+}
+
+.user-controls {
+  display: flex;
+  gap: 4px;
+  margin: auto 0;
+}
+
+.user-icon {
+  aspect-ratio: 1;
+  width: 27px;
+}
+
+.dropdown-icon {
+  aspect-ratio: 1.22;
+  width: 11px;
+  margin: auto 0;
+}
+
+.theme-toggle {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.toggle-icon {
+  aspect-ratio: 1;
+  width: 7px;
+}
+
+.toggle-track {
+  background-color: #c1c1c1;
+  height: 25px;
+}
+
+.coffee-display {
+  border-radius: 25px;
+  background-color: #242325;
+  width: 378px;
+  aspect-ratio: 1;
+  padding: 0 76px;
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coffee-icon {
+  aspect-ratio: 1;
+  width: 202px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.tracker-title {
+  color: #101419;
+  text-align: center;
+  margin-top: 6px;
+  font: 700 64px/1 Poppins, sans-serif;
+}
+
+.input-container {
+  display: flex;
+  margin-top: 11px;
+  width: 501px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.intake-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.input-label {
+  color: #242325;
+  text-align: center;
+  font: 500 24px/2 Inter, sans-serif;
+}
+
+.input-wrapper {
+  display: flex;
+  margin-top: 7px;
+  gap: 5px;
+}
+
+.input-box {
+  border-radius: 10px;
+  border: 1px solid rgba(0, 109, 119, 0.5);
+  padding: 8px 50px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.date-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-input {
+  border-radius: 10px;
+  border: 1px solid rgba(0, 109, 119, 0.5);
+  padding: 12px 9px;
+  margin-top: 11px;
+}
+
+.coffee-option {
+  border-radius: 5px;
+  background-color: #006d77;
+  width: 278px;
+  color: #f8f7f9;
+  padding: 5px;
+  margin-top: 9px;
+  font: 400 16px/2.5 Inter, sans-serif;
+}
+
+.divider {
+  width: 580px;
+  height: 1px;
+  border: 1px solid #101419;
+  margin: 14px 0;
+}
+
+.log-entry {
+  border-radius: 5px;
+  background-color: #006d77;
+  width: 608px;
+  color: #f8f7f9;
+  text-align: center;
+  padding: 4px 26px;
+  margin-top: 9px;
+  font: 700 20px/40px Inter, sans-serif;
+}
+
+.footer {
+  background-color: #101419;
+  width: 100%;
+  padding: 10px 80px;
+  margin-top: 11px;
+}
+
+.footer-content {
+  max-width: 1145px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-logo {
+  width: 177px;
+  margin-top: 32px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+.link-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.column-title {
+  color: #fff;
+  font: 600 18px Poppins, sans-serif;
+}
+
+.footer-link {
+  color: #fff;
+  font: 400 16px Inter, sans-serif;
+}
+
+.newsletter {
+  flex: 2;
+}
+
+.newsletter-title {
+  color: #fff;
+  font: 700 46px Poppins, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.newsletter-text {
+  color: #fff;
+  font: 600 18px Roboto, sans-serif;
+  margin: 49px 0 39px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+}
+
+.email-input {
+  border-radius: 8px;
+  background-color: #006d77;
+  color: #fff;
+  padding: 20px 25px;
+  flex: 1;
+}
+
+.subscribe-btn {
+  border-radius: 12px;
+  background: #fff;
+  color: #1d2130;
+  padding: 16px 40px;
+  font-weight: 500;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+  color: #fff;
+  font: 400 16px/40px Poppins, sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding-left: 20px;
+  }
+  
+  .coffee-display {
+    padding: 0 20px;
+  }
+  
+  .tracker-title {
+    font-size: 40px;
+  }
+  
+  .footer {
+    padding-left: 20px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .footer-logo {
+    margin: 40px 0;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+  }
+  
+  .newsletter-title {
+    font-size: 40px;
+  }
+  
+  .newsletter-text {
+    margin: 40px 0;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .email-input,
+  .subscribe-btn {
+    padding: 16px 20px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+
+<div class="coffee-tracker">
+  <header class="header">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/12f60b77fd228d0416cd17fded1f05755baac15e6fc1136fe16237ac8dbe53d6?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Lift It Logo" class="logo" />
+    <nav class="nav-links">
+      <a href="#" tabindex="0">Home</a>
+      <a href="#" tabindex="0">Learn more</a>
+      <a href="#" tabindex="0">FAQ</a>
+    </nav>
+    <div class="user-controls">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/12eae8400856edd4f2f34253dff5c500ac152f891ad2442fb6cf496c778f5504?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="User Account" class="user-icon" />
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6bf3ec8dc1d12eb3b3970ee7075bde238f41c8a7338aac22c2a581943b33d748?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" class="dropdown-icon" />
+    </div>
+    <div class="theme-toggle" role="switch" tabindex="0" aria-checked="false">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c97d818f77bdd57c7b32d33cd2171c17cc00e938a9dffa3fbbb3aa06ffc9148?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" class="toggle-icon" />
+      <div class="toggle-track"></div>
+    </div>
+  </header>
+
+  <div class="coffee-display">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/90aa7d0fe8cbd6c65378624a77e9adac3b3552e63c3bfb7f6190e2caecb08325?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Coffee Cup Icon" class="coffee-icon" />
+  </div>
+
+  <h1 class="tracker-title">Coffeine Log</h1>
+
+  <form class="input-container">
+    <div class="intake-field">
+      <label for="intake" class="input-label">Intake size (ml)</label>
+      <div class="input-wrapper">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/67b4a831d5e162aa9c993324ce86f180fa17c704759b148eb07701f8c067e796?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" class="measure-icon" />
+        <div class="input-box">
+          <input type="number" id="intake" aria-label="Enter intake size in milliliters" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4a61e0dd789f5e50e21263dfea549beefe1ede2d987d7a1177eee36853a3b627?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="date-field">
+      <label for="date" class="input-label">Date</label>
+      <div class="date-input">
+        <input type="date" id="date" aria-label="Select date" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5fd2f35fa52942b580eef195a386ceda5382c19e826e0a1676305729a4690f18?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" />
+      </div>
+    </div>
+  </form>
+
+  <button class="coffee-option" tabindex="0">Large coffe - 350 ml</button>
+  <button class="coffee-option" tabindex="0">Small coffe - 250 ml</button>
+  <button class="coffee-option" tabindex="0">Espresso - 50 ml</button>
+
+  <div class="divider" role="separator"></div>
+
+  <div class="log-entry">Date: 2024-12-06 | Intake: 450ml - caffeine intake: 250mg</div>
+  <div class="log-entry">Date: 2024-12-06 | Intake: 500ml - caffeine intake: 300mg</div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/12f60b77fd228d0416cd17fded1f05755baac15e6fc1136fe16237ac8dbe53d6?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Lift It Logo" class="footer-logo" />
+      
+      <div class="footer-links">
+        <div class="link-column">
+          <h2 class="column-title">Resources</h2>
+          <a href="#" class="footer-link" tabindex="0">Privacy Policy</a>
+          <a href="#" class="footer-link" tabindex="0">Terms and Condition</a>
+          <a href="#" class="footer-link" tabindex="0">Contact Us</a>
+        </div>
+
+        <div class="link-column">
+          <h2 class="column-title">Navigation</h2>
+          <a href="#" class="footer-link" tabindex="0">Home</a>
+          <a href="#" class="footer-link" tabindex="0">Learn more</a>
+          <a href="#" class="footer-link" tabindex="0">FAQ</a>
+          <a href="#" class="footer-link" tabindex="0">Login / Register</a>
+        </div>
+
+        <div class="newsletter">
+          <h2 class="newsletter-title">LIFT IT</h2>
+          <p class="newsletter-text">Subscribe to our Newsletter</p>
+          <form class="newsletter-form">
+            <label for="email" class="visually-hidden">Enter your email</label>
+            <input type="email" id="email" class="email-input" placeholder="Enter your Email" aria-label="Enter your email address" />
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Copyright © 2024 "LIFT IT" for WSB Academy Interdisciplinary Project, All Rights Reserved</p>
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/68019b13b762f9e4fc9b9605f94b0bdcdb8ba58bb6939514f03acac2b698dede?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" />
+    </div>
+  </footer>
+</div>
