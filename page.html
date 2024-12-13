@@ -1,427 +1,8 @@
-<style>
-.landing-page {
-  background-color: #f8f7f9;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  align-items: center;
-}
 
-.header {
-  background-color: #101419;
-  width: 100%;
-  padding: 12px 70px;
-  display: flex;
-  justify-content: center;
-}
-
-.header-content {
-  display: flex;
-  width: 100%;
-  max-width: 1117px;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.logo {
-  width: 177px;
-  height: auto;
-}
-
-.nav-links {
-  display: flex;
-  gap: 95px;
-  color: #fff;
-  font: 700 24px Poppins, sans-serif;
-}
-
-.user-actions {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-}
-
-.hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 563px;
-  color: #fff;
-}
-
-.hero-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-overlay {
-  position: relative;
-  background-color: rgba(36, 35, 37, 0.4);
-  padding: 136px 80px;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-content {
-  max-width: 865px;
-  text-align: center;
-}
-
-.hero-title {
-  font: 700 64px/80px Poppins, sans-serif;
-}
-
-.accent-text {
-  color: #ff220c;
-}
-
-.hero-subtitle {
-  font: 700 48px Poppins, sans-serif;
-  margin-top: 8px;
-}
-
-.download-buttons {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  margin-top: 11px;
-}
-
-.store-button {
-  border-radius: 6px;
-  background-color: #000;
-  border: 1px solid #a6a6a6;
-  padding: 7px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #fff;
-}
-
-.store-button-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.store-button-subtitle {
-  font: 500 9px 'SF Compact Text', sans-serif;
-}
-
-.store-button-title {
-  font: 500 18px 'SF Compact Display', sans-serif;
-  letter-spacing: -0.47px;
-}
-
-.section-title {
-  color: #101419;
-  text-align: center;
-  font: 700 96px/1 Poppins, sans-serif;
-  margin: 61px 0;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1083px;
-  width: 100%;
-  margin-bottom: 44px;
-}
-
-.feature-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.feature-icon-wrapper {
-  background-color: #242325;
-  border-radius: 25px;
-  aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 56px;
-  width: 100%;
-}
-
-.feature-icon {
-  width: 150px;
-  height: 150px;
-}
-
-.feature-title {
-  color: #242325;
-  font: 700 32px/80px Inter, sans-serif;
-  text-align: center;
-}
-
-.faq-section {
-  background-color: #242325;
-  width: 100%;
-  padding: 22px 80px 12px;
-  color: #fff;
-}
-
-.faq-content {
-  max-width: 1125px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.faq-title {
-  font: 700 96px/1 Poppins, sans-serif;
-}
-
-.faq-description {
-  font: 700 20px/24px Inter, sans-serif;
-  margin: 26px 0 40px;
-}
-
-.faq-grid {
-  display: grid;
-  grid-template-columns: 54% 46%;
-  gap: 20px;
-  max-width: 1003px;
-  margin: 0 auto;
-}
-
-.faq-list {
-  display: flex;
-  gap: 3px;
-  font: 700 20px/40px Inter, sans-serif;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.form-label {
-  font: 500 16px/32px Inter, sans-serif;
-  color: #fff;
-}
-
-.form-input {
-  border-radius: 10px;
-  background-color: #f8f7f9;
-  height: 24px;
-  width: 100%;
-}
-
-.form-textarea {
-  border-radius: 10px;
-  background-color: #f8f7f9;
-  height: 96px;
-  width: 100%;
-}
-
-.submit-button {
-  background-color: #006d77;
-  border-radius: 10px;
-  color: #fff;
-  padding: 8px 24px;
-  width: fit-content;
-  margin-top: 12px;
-}
-
-.testimonials-section {
-  padding: 40px 0;
-}
-
-.testimonials-title {
-  color: #101419;
-  text-align: center;
-  font: 700 64px/1 Poppins, sans-serif;
-  margin-bottom: 24px;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  max-width: 1184px;
-  margin: 0 auto;
-}
-
-.testimonial-card {
-  text-align: center;
-}
-
-.testimonial-image {
-  width: 100%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.testimonial-name {
-  color: #101419;
-  font: 700 24px/28px Inter, sans-serif;
-  margin: 10px 0;
-}
-
-.testimonial-text {
-  color: #242325;
-  font: 500 16px/28px Inter, sans-serif;
-}
-
-.footer {
-  background-color: #101419;
-  padding: 10px 80px;
-  color: #fff;
-}
-
-.footer-content {
-  max-width: 1145px;
-  margin: 0 auto;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 17% 83%;
-  gap: 20px;
-}
-
-.footer-logo {
-  width: 177px;
-  margin-top: 32px;
-}
-
-.footer-links {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.footer-column {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.footer-heading {
-  color: #fff;
-  font: 600 18px Poppins, sans-serif;
-}
-
-.footer-link {
-  color: #fff;
-  font: 400 16px Inter, sans-serif;
-}
-
-.newsletter-form {
-  margin-top: 39px;
-  display: flex;
-  gap: 20px;
-}
-
-.newsletter-input {
-  background-color: #006d77;
-  border-radius: 8px;
-  color: #fff;
-  padding: 20px 25px;
-  flex-grow: 1;
-}
-
-.newsletter-button {
-  background-color: #fff;
-  color: #1d2130;
-  border-radius: 12px;
-  padding: 16px 40px;
-  font-weight: 500;
-}
-
-.copyright {
-  color: #fff;
-  text-align: center;
-  font: 400 16px/40px Poppins, sans-serif;
-  margin-top: 28px;
-}
-
-@media (max-width: 991px) {
-  .header {
-    padding: 0 20px;
-  }
-
-  .hero-overlay {
-    padding: 100px 20px;
-  }
-
-  .hero-title {
-    font-size: 40px;
-    line-height: 55px;
-  }
-
-  .hero-subtitle {
-    font-size: 40px;
-  }
-
-  .section-title {
-    font-size: 40px;
-    margin: 40px 0;
-  }
-
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .feature-icon-wrapper {
-    padding: 20px;
-  }
-
-  .faq-section {
-    padding: 0 20px;
-  }
-
-  .faq-title {
-    font-size: 40px;
-  }
-
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer {
-    padding: 0 20px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .newsletter-form {
-    flex-direction: column;
-  }
-
-  .newsletter-button {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-</style>
-
-<div class="landing-page">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<div class="landing-page" id="home">
   <header class="header">
     <div class="header-content">
       <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/12f60b77fd228d0416cd17fded1f05755baac15e6fc1136fe16237ac8dbe53d6?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="LIFT IT Logo" class="logo">
@@ -431,8 +12,17 @@
         <a href="#faq">FAQ</a>
       </nav>
       <div class="user-actions">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/541c6446611c7018408b6c7ae51498272dde3a3e28b8fefe9ea510b5528f10f9?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="User profile" class="user-icon">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b42038ac1ad54fdd682e2621dca1eebba8028766c0d0b236134d63d2904d4c7c?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Menu" class="menu-icon">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/541c6446611c7018408b6c7ae51498272dde3a3e28b8fefe9ea510b5528f10f9?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" 
+        alt="User profile" class="user-icon">
+        <div class="menu-wrapper">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b42038ac1ad54fdd682e2621dca1eebba8028766c0d0b236134d63d2904d4c7c?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" 
+        alt="Menu" class="menu-icon">
+        <ul class="dropdown-menu">
+          <li><img src="Login.png" alt="login" class="menu-list-icon"><a href="login.html">Login</a></li>
+          <li><img src="Hand_Held_Tablet_Writing.png" alt="register" class="menu-list-icon"><a href="register.html">Register</a></li>
+          <li><img src="User_Circle_Single.png" alt="profile" class="menu-list-icon"><a href="profile.html">Profile</a></li>
+        </ul>
+      </div>
       </div>
     </div>
   </header>
@@ -443,14 +33,9 @@
       <div class="hero-content">
         <h1 class="hero-title">Track your <span class="accent-text">workout</span> <span class="accent-text">progress</span> in an easier way!</h1>
         <p class="hero-subtitle">Coming soon..</p>
-        <div class="download-buttons">
-          <a href="#" class="store-button" role="button">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a63d72ae1475a1d13f8fb3e5f7f27f3171db2e56aee3b875653148e305312eae?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="App Store icon" class="store-icon">
-            <div class="store-button-content">
-              <span class="store-button-subtitle">Download on the</span>
-              <span class="store-button-title">App Store</span>
-            </div>
-          </a>
+        <div class="buttons">
+          <a href="https://play.google.com/store/games?hl=pl"> <img src="Store download button.png"></a>
+          <a href="https://www.apple.com/pl/app-store/"> <img src="app download button.png"></a>
         </div>
       </div>
     </div>
@@ -462,21 +47,27 @@
     <!-- First row of features -->
     <div class="feature-card">
       <div class="feature-icon-wrapper">
+        <a href="workout-log.html">
         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ce281886d63912c40e6ac41fcf2c79b334a1df3b2ba6e9c6cc0c823a2e2e652?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Workout log icon" class="feature-icon">
+      </a>
       </div>
       <h3 class="feature-title">WORKOUT LOG</h3>
     </div>
     
     <div class="feature-card">
       <div class="feature-icon-wrapper">
+        <a href="achievements.html">
         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ec016717a1bb894cdb78b7b7c098bafa2c5ce718e3187f76251a589c66dacb35?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Achievements icon" class="feature-icon">
+      </a>
       </div>
       <h3 class="feature-title">ACHIEVEMENTS</h3>
     </div>
     
     <div class="feature-card">
       <div class="feature-icon-wrapper">
+        <a href="tips.html">
         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c352904eed0dc798385c12f8575d66f77fb4ed3bb36bc98bfccd5d4043d3f428?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Training tips icon" class="feature-icon">
+      </a>
       </div>
       <h3 class="feature-title">TRAINING TIPS</h3>
     </div>
@@ -484,21 +75,27 @@
     <!-- Second row of features -->
     <div class="feature-card">
       <div class="feature-icon-wrapper">
+        <a href="coffe.html">
         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c7ae760bc94d4aaae28009ac68bfb2a6b2cf4e5ed6bd9dc7d6ba81914341b96?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Caffeine log icon" class="feature-icon">
+      </a>
       </div>
       <h3 class="feature-title">CAFFEINE LOG</h3>
     </div>
     
     <div class="feature-card">
       <div class="feature-icon-wrapper">
+        <a href="water.html">
         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5398929a830d0a0999ca2dddf740da263b8e8116252fd1e83ad43679c1594bba?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water tracker icon" class="feature-icon">
+      </a>
       </div>
       <h3 class="feature-title">WATER TRACKER</h3>
     </div>
     
     <div class="feature-card">
       <div class="feature-icon-wrapper">
+        <a href="codition.html">
         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/594ae5ed91d388f0e4c7a47f217c4e0674e5e54d01b156e4b4d0929f1612485a?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Condition icon" class="feature-icon">
+      </a>
       </div>
       <h3 class="feature-title">CONDITION</h3>
     </div>
@@ -512,26 +109,127 @@
       <div class="faq-grid">
         <div class="faq-list">
           <div class="faq-questions">
-            <h3>What is LIFT IT?</h3>
-            <h3>How do I create an account?</h3>
-            <h3>How do I log my workouts?</h3>
-            <h3>Can I track my water and caffeine intake?</h3>
-            <h3>What are achievements?</h3>
-            <h3>How does personalized feedback work?</h3>
-            <h3>Is my data safe and private?</h3>
-            <h3>How do I reset my password?</h3>
-            <h3>How do I contact customer support?</h3>
+            <div class="faq-item" onclick="toggleAnswer(this)">
+              <div class="faq-question">
+                <img class="faq-icon" src="icon_add_expand.png" alt="Toggle Icon">
+                  <span>1. What is LIFT IT?</span>
+              </div>
+              <div class="faq-answer">
+                LIFT IT is a fitness tracking platform designed to help you maintain a healthy lifestyle. You can log your workouts, caffeine intake, and water consumption while earning achievements and receiving personalized feedback on your training sessions.
+              </div>
+          </div>
+      
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="faq-question">
+              <img class="faq-icon" src="icon_add_expand.png" alt="Toggle Icon">
+                <span>2. How do I create an account?</span>
+            </div>
+            <div class="faq-answer">
+              To create an account, click the “Sign Up” button on the homepage. Fill out your personal information, set a password, and start tracking your fitness journey!
+            </div>
+        </div>
+      
+        <div class="faq-item" onclick="toggleAnswer(this)">
+          <div class="faq-question">
+            <img class="faq-icon" src="icon_add_expand.png" alt="Toggle Icon">
+              <span>3. How do I log my workouts?</span>
+          </div>
+          <div class="faq-answer">
+            Navigate to the "Workout Log" section. Select the type of exercise, input the relevant details (such as sets, reps, and weights), and save your session. You can also review past workouts in your activity history.
+          </div>
+      </div>
+          
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="faq-question">
+          <img class="faq-icon" src="icon_add_expand.png" alt="Toggle Icon">
+            <span>4. Can I track my water and caffeine intake?</span>
+        </div>
+        <div class="faq-answer">
+          Yes! Go to the "Caffeine log" and “Water tracker” sections to log your daily water and caffeine intake. The app will provide reminders and suggest optimal intake levels based on your goals.
+        </div>
+    </div>
+      
+    <div class="faq-item" onclick="toggleAnswer(this)">
+      <div class="faq-question">
+        <img class="faq-icon" src="icon_add_expand.png" alt="Toggle Icon">
+          <span>5. What are achievements?</span>
+      </div>
+      <div class="faq-answer">
+        Achievements are rewards for reaching specific fitness milestones. You can earn them by completing challenges, maintaining consistent workout streaks, and achieving personal bests in various exercises.
+      </div>
+  </div>
+      
+  <div class="faq-item" onclick="toggleAnswer(this)">
+    <div class="faq-question">
+      <img class="faq-icon" src="icon_add_expand.png" alt="Toggle Icon">
+        <span>6. How does personalized feedback work</span>
+    </div>
+    <div class="faq-answer">
+      LIFT IT analyzes your workout data and progress over time. Based on your performance, it offers customized tips, workout suggestions, and training adjustments to help you reach your goals faster.
+    </div>
+</div>
+      
+<div class="faq-item" onclick="toggleAnswer(this)">
+  <div class="faq-question">
+    <img class="faq-icon" src="icon_add_expand.png" alt="Toggle Icon">
+      <span>7. Is my data safe and private?</span>
+  </div>
+  <div class="faq-answer">
+    Absolutely. We prioritize your privacy and use industry-standard encryption to secure your data. You can review our full privacy policy for more details.
+  </div>
+</div>
+      
+<div class="faq-item" onclick="toggleAnswer(this)">
+  <div class="faq-question">
+    <img class="faq-icon" src="icon_add_expand.png" alt="Toggle Icon">
+      <span>8. How do I reset my password?</span>
+  </div>
+  <div class="faq-answer">
+    If you forget your password, click "Forgot Password" on the login screen. Follow the instructions sent to your email to reset your password securely.
+  </div>
+</div>
+      
+<div class="faq-item" onclick="toggleAnswer(this)">
+  <div class="faq-question">
+    <img class="faq-icon" src="icon_add_expand.png" alt="Toggle Icon">
+      <span> 9. How do I contact customer support?</span>
+  </div>
+  <div class="faq-answer">
+    You can contact us through the "Support" section in the app or send an email to support@liftit.com. Our team is ready to assist you with any questions or issues.
+  </div>
+</div>
+
+<script>
+  function toggleAnswer(item) {
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-icon');
+      const isVisible = answer.style.maxHeight;
+
+      // Smooth height transition
+      if (isVisible) {
+          answer.style.maxHeight = null;
+      } else {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+
+      // Update the icon
+      icon.src = isVisible ? 'icon_add_expand.png' : 'icon_return.png';
+  }
+</script>
+
+        
+        
           </div>
         </div>
 
         <form class="contact-form">
-          <label for="name" class="form-label">name:</label>
+          <label for="name" class="form-label">Name:</label>
           <input type="text" id="name" class="form-input" required>
           
-          <label for="email" class="form-label">email:</label>
+          <label for="email" class="form-label">Email:</label>
           <input type="email" id="email" class="form-input" required>
           
-          <label for="message" class="form-label">message:</label>
+          <label for="message" class="form-label">Message:</label>
           <textarea id="message" class="form-textarea" required></textarea>
           
           <button type="submit" class="submit-button">SEND</button>
@@ -540,7 +238,7 @@
     </div>
   </section>
 
-  <section class="testimonials-section">
+  <section class="testimonials-section" id="learn">
     <h2 class="testimonials-title">Check out some opinions about us</h2>
     
     <div class="testimonials-grid">
@@ -606,15 +304,16 @@
             <h4 class="footer-heading">Resources</h4>
             <a href="#" class="footer-link">Privacy Policy</a>
             <a href="#" class="footer-link">Terms and Condition</a>
-            <a href="#" class="footer-link">Contact Us</a>
+            <a href="#faq" class="footer-link">Contact Us</a>
           </div>
           
           <div class="footer-column">
             <h4 class="footer-heading">Navigation</h4>
-            <a href="#" class="footer-link">Home</a>
-            <a href="#" class="footer-link">Learn more</a>
-            <a href="#" class="footer-link">FAQ</a>
-            <a href="#" class="footer-link">Login / Register</a>
+            <a href="#home" class="footer-link">Home</a>
+            <a href="#learn" class="footer-link">Learn more</a>
+            <a href="#faq" class="footer-link">FAQ</a>
+            <a href="login.html" class="footer-link">Login</a>
+            <a href="register.html" class="footer-link">Register</a>
           </div>
           
           <div class="footer-column">

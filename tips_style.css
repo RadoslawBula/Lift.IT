@@ -1,0 +1,211 @@
+.notifications-page {
+    background-color: #f8f7f9;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .header {
+    background-color: #101419;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 12px 80px;
+  }
+  
+  .logo {
+    aspect-ratio: 3.16;
+    object-fit: contain;
+    width: 177px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 95px;
+    color: #fff;
+    text-align: center;
+    margin: auto 0;
+    font: 700 24px Poppins, sans-serif;
+  }
+  
+  .user-controls {
+    display: flex;
+    gap: 4px;
+    margin: auto 0;
+  }
+  
+  .user-icon {
+    aspect-ratio: 1;
+    width: 27px;
+    alt: "User profile icon";
+  }
+  
+  .dropdown-icon {
+    aspect-ratio: 1.22;
+    width: 11px;
+    margin: auto 0;
+    alt: "Dropdown menu indicator";
+  }
+  
+  .notifications-container {
+    align-self: center;
+    display: flex;
+    margin-top: 24px;
+    width: 100%;
+    max-width: 1083px;
+    flex-direction: column;
+  }
+  
+  .notifications-header {
+    display: flex;
+    width: 100%;
+    gap: 100px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .page-title {
+    color: #101419;
+    text-align: center;
+    font: 700 64px/1 Poppins, sans-serif;
+  }
+  
+  .notification-toggle {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  
+  .toggle-text {
+    color: #242325;
+    font: 400 16px Inter, sans-serif;
+  }
+  
+  .toggle-switch {
+    border-radius: 60px;
+    background-color: #006d77;
+    padding: 4px 3px;
+  }
+  
+  .toggle-button {
+    background-color: #f8f7f9;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+  }
+  
+  .notification-date {
+    color: #242325;
+    margin: 32px 0 0 101px;
+    font: 400 16px Inter, sans-serif;
+  }
+  
+  .notification-card {
+    border-radius: 15px;
+    background-color: #006d77;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 982px;
+    color: #f8f7f9;
+    padding: 25px 55px;
+    margin: 16px 0;
+    font: 400 24px/24px Inter, sans-serif;
+  }
+  
+  .notification-title {
+    font-weight: 700;
+  }
+
+  .newsletter-section {
+    max-width: 400px;
+  }
+  
+  .newsletter-title {
+    font: 700 46px Poppins, sans-serif;
+    letter-spacing: 0.5px;
+  }
+  
+  .newsletter-form {
+    margin-top: 39px;
+    display: flex;
+    gap: 16px;
+  }
+  
+  .newsletter-input {
+    border-radius: 8px;
+    background-color: #006d77;
+    padding: 20px 25px;
+    color: #fff;
+    border: none;
+    flex-grow: 1;
+  }
+  
+  .newsletter-button {
+    border-radius: 12px;
+    background: #fff;
+    color: #1d2130;
+    font-weight: 500;
+    padding: 16px 40px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .copyright {
+    text-align: center;
+    padding: 28px 0;
+    font: 400 16px Poppins, sans-serif;
+    color: #fff;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  @media (max-width: 991px) {
+    .header {
+      padding: 12px 20px;
+    }
+  
+    .page-title {
+      font-size: 40px;
+    }
+  
+    .notification-date {
+      margin-left: 10px;
+    }
+  
+    .notification-card {
+      padding: 20px;
+    }
+  
+    .footer {
+      padding: 40px 20px;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+      gap: 40px;
+    }
+  
+    .newsletter-section {
+      width: 100%;
+    }
+  
+    .newsletter-form {
+      flex-direction: column;
+    }
+  
+    .newsletter-button {
+      width: 100%;
+    }
+  }
