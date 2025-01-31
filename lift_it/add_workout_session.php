@@ -121,8 +121,8 @@ $sessions = $stmt->fetchAll();
                     <input type="text" id="workout_name" name="workout_name" class="session-input" required>
                     <label for="exercise" class="select-label">Exercise</label>
                     <select id="exercise" name="exercise_id[]" class="select-dropdown" multiple required>
-                        <option value="1">Squat</option>
-                        <option value="2">Bench Press</option>
+                        <option value="1">Bench Press</option>
+                        <option value="2">Squat</option>
                         <option value="3">Deadlift</option>
                     </select>
                     <label for="reps" class="select-label">Reps</label>
@@ -146,10 +146,10 @@ $sessions = $stmt->fetchAll();
             <table class="sessions-table">
                 <thead>
                     <tr>
-                        <th>Nazwa Sesji</th>
-                        <th>Czas Trwania</th>
-                        <th>Data</th>
-                        <th>Ćwiczenia</th>
+                        <th>Session name</th>
+                        <th>Duration</th>
+                        <th>Date</th>
+                        <th>Exercise</th>
                     </tr>
                 </thead>
                 <tbody>

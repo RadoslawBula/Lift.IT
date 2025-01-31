@@ -82,26 +82,7 @@ $stmt->execute();
 $caffeine_logs = $stmt->fetchAll();
 ?>
 
-            <?php 
-            $current_date = '';
-            foreach ($caffeine_logs as $log): 
-               
-                if ($current_date !== $log['date']) {
-                    $current_date = $log['date'];
-                    echo "<tr><td colspan='4'><strong>Data: " . htmlspecialchars($log['date']) . "</strong></td></tr>";
-                }
-            ?>
-                <tr>
-                    <td></td> 
-                    <td><?php echo htmlspecialchars($log['drink_type']); ?></td>
-                    <td><?php echo $log['total_ml']; ?> ml</td>
-                    <td><?php echo $log['total_caffeine']; ?> mg</td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
 
-    <a href="dashboard.php">Powrót do dashboard</a>
 
 
     <!DOCTYPE html>
@@ -112,6 +93,7 @@ $caffeine_logs = $stmt->fetchAll();
     <title>Dashboard</title>
     <link rel="stylesheet" href="style/add_caffeine_intake.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/water.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -139,9 +121,7 @@ $caffeine_logs = $stmt->fetchAll();
             </div>
         </header>
 
-  <div class="coffee-display">
-    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/90aa7d0fe8cbd6c65378624a77e9adac3b3552e63c3bfb7f6190e2caecb08325?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Coffee Cup Icon" class="coffee-icon" />
-  </div>
+  
 
   <h1 class="tracker-title">Coffeine Log</h1>
 
@@ -151,74 +131,73 @@ $caffeine_logs = $stmt->fetchAll();
 	
       <div class="input-wrapper">
         
-        <div class="input-box">  
+ 
 		
-          <input type="number" id="intake" aria-label="Enter intake size in milliliters" name="intake"/>
-		  <button type="submit">Dodaj spożycie</button>
+          <input type="number" class="dane" id="intake" aria-label="Enter intake size in milliliters" name="intake"/>
+		  
         </div>
-      </div>
-    </div>
-	
+
 	<div class="intake-field">
 		<label for="drink-type" class="input-label">Type of drink </label>
 		<div class="input-wrapper">
-			<div class="input-box">
-				<select name="drink_type" id="drink-type" required>
+
+				<select name="drink_type" class="dane"  id="drink-type" required>
 					<option value="espresso">Espresso</option>
-					<option value="kawa_parzona">Kawa parzona</option>
-					<option value="kawa_rozpuszczalna">Kawa rozpuszczalna</option>
+					<option value="Brewed">Brewed coffee</option>
+					<option value="Instant">Instant coffee</option>
 					<option value="americano">Americano</option>
 					<option value="cappuccino_latte">Cappuccino/Latte</option>
 					<option value="cold_brew">Cold Brew</option>
-					<option value="kawa_mokka">Kawa Mokka</option>
-					<option value="ekspres_przelewowy">Ekspres przelewowy</option>
-					<option value="energetyk">Energetyk</option>
+					<option value="Mokka">Mokka coffe</option>
+					<option value="Drip">Drip coffee</option>
+					<option value="Energy">Energy drink</option>
 				</select><br><br>
 				
 			</div>
 		</div>
-	</div>
+
 
     <div class="date-field">
-      <label for="date" class="input-label">Date</label>
-      <div class="date-input">
-        <input type="date" id="date" aria-label="Select date" name="date"/>
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5fd2f35fa52942b580eef195a386ceda5382c19e826e0a1676305729a4690f18?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="" />
+      <label for="date" class="input-label" class="dane">Date</label>
+
+        <input type="date" id="date" class="dane" aria-label="Select date" name="date"/>
       </div>
     </div>
 	
-	
-	
+	<button type="submit">Add intake</button>
+		</div>
 	
 	
   </form>
 
+	
  
 
-  <div class="divider" role="separator"></div>
 
-	<h2>Twoje spożycie kofeiny</h2>
+
+	<h2>Your caffeine intake</h2>
     <table>
         <thead>
             <tr>
-                <th>Data</th>
-                <th>Rodzaj napoju</th>
-                <th>Łączna ilość (ml)</th>
-                <th>Łączna kofeina (mg)</th>
+                <th>Date</th>
+                <th>Beverage type</th>
+                <th>Total quantity (ml)</th>
+                <th>Total caffeine (mg)</th>
             </tr>
         </thead>
         <tbody>
+            <tr>
             <?php 
             $current_date = '';
             foreach ($caffeine_logs as $log): 
                
                 if ($current_date !== $log['date']) {
                     $current_date = $log['date'];
-                    echo "<tr><td colspan='4'><strong>Data: " . htmlspecialchars($log['date']) . "</strong></td></tr>";
+                    echo "<td><strong>Data: " . htmlspecialchars($log['date']) . "</strong></td>";
                 }
             ?>
-                <tr>
-                    <td></td> 
+                
+
                     <td><?php echo htmlspecialchars($log['drink_type']); ?></td>
                     <td><?php echo $log['total_ml']; ?> ml</td>
                     <td><?php echo $log['total_caffeine']; ?> mg</td>

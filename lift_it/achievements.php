@@ -63,12 +63,12 @@ $achievements = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </header>
 </head>
 <body>
-    <h1>Osiągnięcia</h1>
+    <h1>Achievements</h1>
     <table>
         <thead>
             <tr>
-                <th>Osiągnięcie</th>
-                <th>Opis</th>
+                <th>Achievements</th>
+                <th>Description</th>
                 <th>Status</th>
             </tr>
         </thead>
@@ -78,14 +78,14 @@ $achievements = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <td><?php echo htmlspecialchars($achievement['achievement_name']); ?></td>
                     <td><?php echo htmlspecialchars($achievement['description']); ?></td>
                     <td>
-                        <?php echo $achievement['is_achieved'] ? 'Zdobyte' : 'Nie zdobyte'; ?>
+                        <?php echo $achievement['is_achieved'] ? 'Achieved' : 'Not Achieved'; ?>
                     </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table></br>
 
-    <a href="dashboard.php">Powrót do dashboard</a>
+    <a href="dashboard.php">Back to Dashboard</a>
 </body>
 <footer class="footer">
     <div class="footer-content">

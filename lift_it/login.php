@@ -71,11 +71,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <form class="login-form" method="POST" action="">
                 <h1 class="welcome-heading">Welcome back</h1>
                 <div class="form-group">
-                    <label for="username" class="form-label" style="color: rgba(16, 20, 25, 1);">Nazwa Użytkownika</label>
+                    <label for="username" class="form-label" style="color: rgba(16, 20, 25, 1);">User Name</label>
                     <input type="text" id="username" name="username" class="form-input" required>
                 </div>
                 <div class="form-group">
-                    <label for="password" class="form-label" style="color: rgba(16, 20, 25, 1);">Hasło</label>
+                    <label for="password" class="form-label" style="color: rgba(16, 20, 25, 1);">Password</label>
                     <input type="password" id="password" name="password" class="form-input" required>
                 </div>
                 <div class="form-options">

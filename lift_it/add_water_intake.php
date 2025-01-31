@@ -87,28 +87,28 @@ $water_logs = $stmt->fetchAll();
         </header>
 
     <meta charset="UTF-8">
-    <title>Śledzenie Spożycia Wody</title>
+    <title>Tracking Your Water Intake</title>
 </head>
 <body>
-    <h1>Śledzenie Spożycia Wody</h1>
+    <h1>Tracking Your Water Intake</h1>
 
     <form action="add_water_intake.php" method="post">
-        <label for="intake_amount">Ilość spożytej wody (ml):</label>
+        <label for="intake_amount">Amount of water consumed (ml):</label>
         <input type="number" class="dane" name="intake_amount" min="1" required><br>
 
-        <label for="intake_date">Data spożycia:</label>
+        <label for="intake_date">Date of consumption:</label>
         <input type="date" class="dane" name="intake_date" value="<?php echo date('Y-m-d'); ?>" required><br>
 
-        <button type="submit">Dodaj spożycie wody</button>
+        <button type="submit">Add water intake</button>
     </form>
 
-    <h2>Moje Logi Spożycia Wody</h2>
+    <h2>My Water Consumption Logs</h2>
     <?php if (count($water_logs) > 0): ?>
         <table>
             <thead>
                 <tr>
-                    <th>Data</th>
-                    <th>Ilość Wody (ml)</th>
+                    <th>Date</th>
+                    <th>Quantity of Water (ml)</th>
                 </tr>
             </thead>
             <tbody>
@@ -121,10 +121,8 @@ $water_logs = $stmt->fetchAll();
             </tbody>
         </table>
     <?php else: ?>
-        <p>Brak zapisanych logów spożycia wody.</p>
+        <p>No recorded water consumption logs.</p>
     <?php endif; ?>
-
-    <a href="dashboard.php" style="color: rgba(16, 20, 25, 1)">Powrót do panelu użytkownika</a>
 </body>
 <footer class="footer">
     <div class="footer-content">
