@@ -1,0 +1,319 @@
+
+<link rel="stylesheet" href="style/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<div class="landing-page" id="home">
+  <header class="header">
+    <div class="header-content">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/12f60b77fd228d0416cd17fded1f05755baac15e6fc1136fe16237ac8dbe53d6?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="LIFT IT Logo" class="logo">
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#learn">Learn more</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="user-actions">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/541c6446611c7018408b6c7ae51498272dde3a3e28b8fefe9ea510b5528f10f9?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" 
+        alt="User profile" class="user-icon">
+        <div class="menu-wrapper">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b42038ac1ad54fdd682e2621dca1eebba8028766c0d0b236134d63d2904d4c7c?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" 
+        alt="Menu" class="menu-icon">
+        <ul class="dropdown-menu">
+          <li><img src="pic/Login.png" alt="login" class="menu-list-icon"><a href="login.php">Login</a></li>
+          <li><img src="pic/Hand_Held_Tablet_Writing.png" alt="register" class="menu-list-icon"><a href="register.php">Register</a></li>
+          <li><img src="pic/User_Circle_Single.png" alt="profile" class="menu-list-icon"><a href="dashboard.php">Profile</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a60e0059132ce5b2ab306ff5c943fe71e14409d271af827b9d28f0282def414f?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Hero background" class="hero-image">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1 class="hero-title">Track your <span class="accent-text">workout</span> <span class="accent-text">progress</span> in an easier way!</h1>
+        <p class="hero-subtitle">Coming soon..</p>
+        <div class="buttons">
+          <a href="https://play.google.com/store/games?hl=pl"> <img src="pic/Store download button.png"></a>
+          <a href="https://www.apple.com/pl/app-store/"> <img src="pic/app download button.png"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="section-title">Free Workout Tools</h2>
+
+  <div class="features-grid">
+    <!-- First row of features -->
+    <div class="feature-card">
+      <div class="feature-icon-wrapper">
+        <a href="add_workout_session.php">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ce281886d63912c40e6ac41fcf2c79b334a1df3b2ba6e9c6cc0c823a2e2e652?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Workout log icon" class="feature-icon">
+      </a>
+      </div>
+      <h3 class="feature-title">WORKOUT LOG</h3>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon-wrapper">
+        <a href="achievements.php">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ec016717a1bb894cdb78b7b7c098bafa2c5ce718e3187f76251a589c66dacb35?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Achievements icon" class="feature-icon">
+      </a>
+      </div>
+      <h3 class="feature-title">ACHIEVEMENTS</h3>
+    </div>
+    
+
+
+    <!-- Second row of features -->
+    <div class="feature-card">
+      <div class="feature-icon-wrapper">
+        <a href="add_caffeine_intake.php">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c7ae760bc94d4aaae28009ac68bfb2a6b2cf4e5ed6bd9dc7d6ba81914341b96?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Caffeine log icon" class="feature-icon">
+      </a>
+      </div>
+      <h3 class="feature-title">CAFFEINE LOG</h3>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon-wrapper">
+        <a href="add_water_intake.php">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5398929a830d0a0999ca2dddf740da263b8e8116252fd1e83ad43679c1594bba?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Water tracker icon" class="feature-icon">
+      </a>
+      </div>
+      <h3 class="feature-title">WATER TRACKER</h3>
+    </div>
+    
+
+  </div>
+
+  <section class="faq-section" id="faq">
+    <div class="faq-content">
+      <h2 class="faq-title">FAQ</h2>
+      <p class="faq-description">Welcome to LIFT IT! Here are answers to some frequently asked questions about our platform. If you have additional questions, feel free to reach out to our support team. Stay fit, stay motivated – with LIFT IT! 🚀</p>
+      
+      <div class="faq-grid">
+        <div class="faq-list">
+          <div class="faq-questions">
+            <div class="faq-item" onclick="toggleAnswer(this)">
+              <div class="faq-question">
+                <img class="faq-icon" src="pic/icon_add_expand.png" alt="Toggle Icon">
+                  <span>1. What is LIFT IT?</span>
+              </div>
+              <div class="faq-answer">
+                LIFT IT is a fitness tracking platform designed to help you maintain a healthy lifestyle. You can log your workouts, caffeine intake, and water consumption while earning achievements and receiving personalized feedback on your training sessions.
+              </div>
+          </div>
+      
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="faq-question">
+              <img class="faq-icon" src="pic/icon_add_expand.png" alt="Toggle Icon">
+                <span>2. How do I create an account?</span>
+            </div>
+            <div class="faq-answer">
+              To create an account, click the “Sign Up” button on the homepage. Fill out your personal information, set a password, and start tracking your fitness journey!
+            </div>
+        </div>
+      
+        <div class="faq-item" onclick="toggleAnswer(this)">
+          <div class="faq-question">
+            <img class="faq-icon" src="pic/icon_add_expand.png" alt="Toggle Icon">
+              <span>3. How do I log my workouts?</span>
+          </div>
+          <div class="faq-answer">
+            Navigate to the "Workout Log" section. Select the type of exercise, input the relevant details (such as sets, reps, and weights), and save your session. You can also review past workouts in your activity history.
+          </div>
+      </div>
+          
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="faq-question">
+          <img class="faq-icon" src="pic/icon_add_expand.png" alt="Toggle Icon">
+            <span>4. Can I track my water and caffeine intake?</span>
+        </div>
+        <div class="faq-answer">
+          Yes! Go to the "Caffeine log" and “Water tracker” sections to log your daily water and caffeine intake. The app will provide reminders and suggest optimal intake levels based on your goals.
+        </div>
+    </div>
+      
+    <div class="faq-item" onclick="toggleAnswer(this)">
+      <div class="faq-question">
+        <img class="faq-icon" src="pic/icon_add_expand.png" alt="Toggle Icon">
+          <span>5. What are achievements?</span>
+      </div>
+      <div class="faq-answer">
+        Achievements are rewards for reaching specific fitness milestones. You can earn them by completing challenges, maintaining consistent workout streaks, and achieving personal bests in various exercises.
+      </div>
+  </div>
+      
+  <div class="faq-item" onclick="toggleAnswer(this)">
+    <div class="faq-question">
+      <img class="faq-icon" src="pic/icon_add_expand.png" alt="Toggle Icon">
+        <span>6. How does personalized feedback work</span>
+    </div>
+    <div class="faq-answer">
+      LIFT IT analyzes your workout data and progress over time. Based on your performance, it offers customized tips, workout suggestions, and training adjustments to help you reach your goals faster.
+    </div>
+</div>
+      
+<div class="faq-item" onclick="toggleAnswer(this)">
+  <div class="faq-question">
+    <img class="faq-icon" src="pic/icon_add_expand.png" alt="Toggle Icon">
+      <span>7. Is my data safe and private?</span>
+  </div>
+  <div class="faq-answer">
+    Absolutely. We prioritize your privacy and use industry-standard encryption to secure your data. You can review our full privacy policy for more details.
+  </div>
+</div>
+      
+<div class="faq-item" onclick="toggleAnswer(this)">
+  <div class="faq-question">
+    <img class="faq-icon" src="pic/icon_add_expand.png" alt="Toggle Icon">
+      <span>8. How do I reset my password?</span>
+  </div>
+  <div class="faq-answer">
+    If you forget your password, click "Forgot Password" on the login screen. Follow the instructions sent to your email to reset your password securely.
+  </div>
+</div>
+      
+<div class="faq-item" onclick="toggleAnswer(this)">
+  <div class="faq-question">
+    <img class="faq-icon" src="pic/icon_add_expand.png" alt="Toggle Icon">
+      <span> 9. How do I contact customer support?</span>
+  </div>
+  <div class="faq-answer">
+    You can contact us through the "Support" section in the app or send an email to support@liftit.com. Our team is ready to assist you with any questions or issues.
+  </div>
+</div>
+
+<script>
+  function toggleAnswer(item) {
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-icon');
+      const isVisible = answer.style.maxHeight;
+
+      // Smooth height transition
+      if (isVisible) {
+          answer.style.maxHeight = null;
+      } else {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+
+      // Update the icon
+      icon.src = isVisible ? 'pic/icon_add_expand.png' : 'pic/icon_return.png';
+  }
+</script>
+
+        
+        
+          </div>
+        </div>
+
+        <form class="contact-form">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" id="name" class="form-input" required>
+          
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" id="email" class="form-input" required>
+          
+          <label for="message" class="form-label">Message:</label>
+          <textarea id="message" class="form-textarea" required></textarea>
+          
+          <button type="submit" class="submit-button">SEND</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section" id="learn">
+    <h2 class="testimonials-title">Check out some opinions about us</h2>
+    
+    <div class="testimonials-grid">
+      <!-- First row testimonials -->
+      <div class="testimonial-card">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7cb85050bffd27bc7c6c845f7e1a15e681811ef95b3de657a1d62527cbbd1e82?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Emma and Jack" class="testimonial-image">
+        <h3 class="testimonial-name">Emma & Jack (Fitness Coaches)</h3>
+        <p class="testimonial-text">"LIFT IT revolutionized how we track our workouts and keep our clients on track. It's simple, motivating, and packed with features that every fitness enthusiast needs!"</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/342e8fd2576fd38c2a6c3a784ceb2548f750ba0d996c1f03105b5fa2f6be2e65?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Sophie and Mark" class="testimonial-image">
+        <h3 class="testimonial-name">Sophie & Mark (Personal Trainers)</h3>
+        <p class="testimonial-text">"We love how LIFT IT keeps us accountable and motivated. The achievements and personalized feedback make every workout count!"</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/abf75850c438b0454f1a52b8dc4500abe97959d4707ecff455757e9e09817a97?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Laura and Chris" class="testimonial-image">
+        <h3 class="testimonial-name">Laura & Chris (Strength Coaches)</h3>
+        <p class="testimonial-text">"As trainers, we appreciate how LIFT IT combines workout logging with hydration and caffeine tracking. It's a complete fitness companion!"</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2128d7d02883b282ede817466b7c2d07f5b651c4436d720745d417bc83975767?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Liam" class="testimonial-image">
+        <h3 class="testimonial-name">Liam (CrossFit Athlete)</h3>
+        <p class="testimonial-text">"I've tried many fitness apps, but LIFT IT stands out with its intuitive design and helpful performance tips."</p>
+      </div>
+
+      <!-- Second row testimonials -->
+      <div class="testimonial-card">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/633fb70bfa820a215e621b8cebc25013ba5305d2b4ac8bcf2387a4963e37baf8?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Anna" class="testimonial-image">
+        <h3 class="testimonial-name">Anna (Wellness Enthusiast)</h3>
+        <p class="testimonial-text">"LIFT IT keeps me organized and focused on my fitness journey. I love seeing my progress and earning achievements along the way!"</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ab64861499f02544acdc00b999b1c3bf0909cf72681fbe87fe49d57633983545?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Michael" class="testimonial-image">
+        <h3 class="testimonial-name">Michael (Calisthenics Athlete)</h3>
+        <p class="testimonial-text">"The personalized feedback feature has helped me improve my calisthenics skills significantly. Highly recommend it!"</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/bcd66089e47242ac531d53a1cfa6041c5a2bd6024ad34b4d22677448b332828c?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Ethan" class="testimonial-image">
+        <h3 class="testimonial-name">Ethan (Fitness Enthusiast)</h3>
+        <p class="testimonial-text">"Starting my fitness journey was intimidating, but LIFT IT made it fun and motivating. I feel stronger and more energized every day!"</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/517bd84088c6bae449bbaeaecbdc0ce690d96837876fd17f6e2459b81e5aef77?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="Daniel" class="testimonial-image">
+        <h3 class="testimonial-name">Daniel (Bodybuilder)</h3>
+        <p class="testimonial-text">"Tracking workouts has never been easier. LIFT IT gives me all the tools I need to stay on top of my game!"</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/12f60b77fd228d0416cd17fded1f05755baac15e6fc1136fe16237ac8dbe53d6?placeholderIfAbsent=true&apiKey=36d99834ec054334af6f078ae6b73b5b" alt="LIFT IT Logo" class="footer-logo">
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4 class="footer-heading">Resources</h4>
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="#" class="footer-link">Terms and Condition</a>
+            <a href="#faq" class="footer-link">Contact Us</a>
+          </div>
+          
+          <div class="footer-column">
+            <h4 class="footer-heading">Navigation</h4>
+            <a href="#home" class="footer-link">Home</a>
+            <a href="#learn" class="footer-link">Learn more</a>
+            <a href="#faq" class="footer-link">FAQ</a>
+            <a href="login.html" class="footer-link">Login</a>
+            <a href="register.html" class="footer-link">Register</a>
+          </div>
+          
+          <div class="footer-column">
+            <h4 class="footer-heading">LIFT IT</h4>
+            <p class="footer-link">Subscribe to our Newsletter</p>
+            <form class="newsletter-form">
+              <label for="newsletter-email" class="visually-hidden">Enter your Email</label>
+              <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Enter your Email" required>
+              <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <p class="copyright">Copyright © 2024 "LIFT IT" for WSB Academy Interdisciplinary Project, All Rights Reserved</p>
+    </div>
+  </footer>

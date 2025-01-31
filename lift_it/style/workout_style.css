@@ -1,0 +1,120 @@
+.workout-form {
+  border-radius: 15px;
+  background-color: rgba(248, 247, 249, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 40px;
+  width: 984px;
+  max-width: 100%;
+  padding: 20px 72px;
+  border: 2px solid rgba(0, 109, 119, 0.5);
+}
+.page-title{
+text-align: center;
+font: 700 80px/1 Poppins, sans-serif;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  gap: 20px;
+}
+
+.exercise-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.session-name-label,
+.select-label,
+.detail-label {
+  color: rgba(36, 35, 37, 1);
+  text-align: left;
+  margin-bottom: -6px;
+  font: 500 24px/2 Inter, sans-serif;
+}
+
+.session-input,
+.reps-input,
+.weight-input,
+.select-dropdown {
+  border-radius: 10px;
+  background-color: transparent;
+  width: 100%; /* Sprawia, że wszystkie inputy mają tę samą szerokość */
+  height: 40px;
+  border: 1px solid rgba(0, 109, 119, 0.5);
+  margin-top: -4px; /* Dodaje przestrzeń między etykietą a polem input */
+}
+
+.workout-details .date-picker,
+.workout-details .duration-input {
+  max-width: 200px; /* Ogranicza szerokość dla inputu date i time */
+}
+
+.workout-details .date-picker,
+.workout-details .duration-input {
+  width: 100%; /* Zapewnia, że date i time wypełniają całą dostępną przestrzeń */
+  height: 40px;
+  border: 1px solid rgba(0, 109, 119, 0.5);
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+.submit-btn {
+  border-radius: 10px;
+  background-color: rgba(0, 109, 119, 1);
+  color: rgba(248, 247, 249, 1);
+  text-align: center;
+  padding: 0 68px;
+  font: 500 24px/2 Inter, sans-serif;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.sessions-section {
+  border-radius: 15px;
+  background-color: rgba(248, 247, 249, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 40px;
+  width: 984px;
+  max-width: 100%;
+  padding: 20px 72px;
+  border: 2px solid rgba(0, 109, 119, 0.5);
+}
+
+.sessions-section h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  color: #242325;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sessions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.sessions-table th,
+.sessions-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 109, 119, 0.5);
+}
+
+.sessions-table th {
+  background-color: #101419;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.sessions-table td {
+  color: #242325;
+  font-size: 18px;
+}
+
+.sessions-table tr:hover {
+  background-color: rgba(0, 109, 119, 1); /* Efekt hover dla wierszy tabeli */
+}
